@@ -1,4 +1,4 @@
-import streamlit as streamlit
+import streamlit as st
 
 
 def calculator_body():
@@ -18,4 +18,9 @@ def calculator_body():
             calculator_function(num1, num2, operator)
 
 
-def calculator_function(num1, num2)
+def calculator_function(num1, num2, operator):
+    if operator == 'Add': result = num1 + num2
+    elif operator == 'Subtract': result = num1 - num2
+    elif operator == 'Multiply': result = num1 * num2
+    elif operator == 'Divide': result = num1 / num2
+    st.success(f'The result is: **{result}**')
